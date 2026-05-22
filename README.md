@@ -55,16 +55,35 @@ ChurnPredictor-LLM/
 
 ## ⚙️ Requisitos y Configuración de Entorno
 
-### 1. Clonar e Instalar Dependencias
-Instala los requerimientos en tu entorno local de Python:
+### 1. Clonar el Repositorio
+Clona este repositorio en tu máquina local y accede a la carpeta del proyecto:
 ```bash
+git clone https://github.com/mcarrasqub/ChurnPredictor-LLM.git
+cd ChurnPredictor-LLM
+```
+
+### 2. Configurar el Entorno Virtual e Instalar Dependencias
+Se recomienda utilizar un entorno virtual para asegurar la reproducibilidad de las librerías:
+```bash
+# Crear el entorno virtual
+python -m venv .venv
+
+# Activar el entorno virtual:
+# En Windows (PowerShell):
+.\.venv\Scripts\Activate.ps1
+# En Windows (CMD):
+.\.venv\Scripts\activate.bat
+# En macOS/Linux:
+source .venv/bin/activate
+
+# Instalar dependencias requeridas
 pip install -r requirements.txt
 ```
 
-### 2. Configurar el LLM Local (Ollama)
+### 3. Configurar el LLM Local (Ollama)
 Para usar el asistente de IA local para retención de clientes:
 1. Descarga e instala Ollama desde [https://ollama.com](https://ollama.com).
-2. Descarga el modelo de lenguaje ejecutando en tu terminal:
+2. Descarga y ejecuta el modelo de lenguaje en tu terminal:
    ```bash
    ollama run mistral
    ```
