@@ -9,12 +9,12 @@ Este proyecto implementa un flujo completo de Ciencia de Datos y Machine Learnin
 El repositorio está organizado bajo el siguiente estándar de desarrollo y reproducibilidad:
 
 ```text
-proyecto-ia-eafit/
+ChurnPredictor-LLM/
 ├── README.md                    # Instrucciones de ejecución claras (este archivo)
 ├── requirements.txt             # Dependencias del proyecto
 │
 ├── docs/
-│   ├── informe_final.pdf        # Informe final del proyecto (compilado)
+│   ├── Proyecto_Final.pdf       # Informe final del proyecto
 │   └── guia_usuario.md          # Guía detallada de uso con explicaciones del sistema
 │
 ├── data/
@@ -22,10 +22,10 @@ proyecto-ia-eafit/
 │   └── processed/               # Datos limpios y particionados (train.csv, val.csv, test.csv)
 │
 ├── notebooks/
-│   ├── 01_eda.ipynb             # Exploración y análisis de datos (Persona 1)
-│   ├── 02_preprocessing.ipynb   # Ingeniería de variables y preprocesamiento (Persona 1)
-│   ├── 03_modeling.ipynb        # Modelado, tuning y evaluación en test set (Persona 1)
-│   └── 04_llm_rag_agents.ipynb  # Integración local con Ollama (Persona 2)
+│   ├── 01_eda.ipynb             # Exploración y análisis de datos 
+│   ├── 02_preprocessing.ipynb   # Ingeniería de variables y preprocesamiento 
+│   ├── 03_modeling.ipynb        # Modelado, tuning y evaluación en test set 
+│   └── 04_llm_rag_agents.ipynb  # Integración local con Ollama 
 │
 ├── src/
 │   ├── data/
@@ -34,7 +34,8 @@ proyecto-ia-eafit/
 │   ├── models/
 │   │   └── model_pipeline.py    # Definición y tuning (GridSearchCV) del XGBoost
 │   ├── evaluation/
-│   │   └── metrics_eval.py      # Reporte de métricas de prueba y matriz de confusión
+│   │   ├── metrics_eval.py      # Reporte de métricas de prueba y matriz de confusión
+│   │   └── generate_curves.py   # Generación de curvas de aprendizaje y reporte de métricas
 │   └── agents/
 │       └── ollama_explain.py    # Explicabilidad local SHAP y prompts en Ollama
 │
@@ -42,7 +43,9 @@ proyecto-ia-eafit/
 │   └── checkpoints/             # Checkpoints de preprocesador y modelo entrenado (.joblib)
 │
 ├── outputs/
-│   └── confusion_matrix.png     # Matriz de confusión final en el set de prueba
+│   ├── confusion_matrix.png     # Matriz de confusión final en el set de prueba
+│   ├── eda_target_corr.png      # Gráfica de distribución de objetivo y correlaciones del EDA
+│   └── train_val_curves.png     # Curvas de pérdida y exactitud de entrenamiento vs validación
 │
 └── app/
     └── main.py                  # Interfaz interactiva desarrollada en Streamlit
@@ -89,10 +92,10 @@ Una vez entrenado el modelo, inicia la aplicación web interactiva con:
 ```bash
 streamlit run app/main.py
 ```
-Abre en tu navegador `http://localhost:8501`. Podrás seleccionar cualquier cliente del conjunto de prueba o simular uno en tiempo real, visualizar su probabilidad de fuga, el impacto de sus variables con SHAP y generar recomendaciones automatizadas a través de Ollama.
+Abre en tu navegador `http://localhost:8501`. Podrás seleccionar cualquier cliente del conjunto de prueba o simular uno en tiempo real, visualizar su probabilidad de fuga, el impacto de sus variables con SHAP y generar recomendaciones automatizadas de retención a través de Ollama.
 
 ---
 
 ## 👥 Integrantes
-*   **Mariana Carrasquilla Botero** (Persona 1: Data Science & ML)
-*   **Sofía Gallo de la Rosa** (Persona 2: LLM, Backend & Reproducibilidad)
+*   **Mariana Carrasquilla Botero** 
+*   **Sofía Gallo de la Rosa** 
