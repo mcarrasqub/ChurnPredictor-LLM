@@ -1,10 +1,10 @@
-# ChurnPredictor-LLM 📊🤖
+# ChurnPredictor-LLM 
 
 Este proyecto implementa un flujo completo de Ciencia de Datos y Machine Learning para predecir y explicar la fuga de clientes (*Churn*) en el dataset clásico **IBM Telco Customer Churn**. Está diseñado para integrarse con modelos de lenguaje locales (LLMs) mediante **Ollama**, permitiendo generar explicaciones personalizadas y comprensibles sobre los factores de riesgo de cada cliente a través de una interfaz interactiva de **Streamlit**.
 
 ---
 
-## 📁 Estructura del Proyecto
+## Estructura del Proyecto
 
 El repositorio está organizado bajo el siguiente estándar de desarrollo y reproducibilidad:
 
@@ -53,7 +53,7 @@ ChurnPredictor-LLM/
 
 ---
 
-## ⚙️ Requisitos y Configuración de Entorno
+## Requisitos y Configuración de Entorno
 
 ### 1. Clonar el Repositorio
 Clona este repositorio en tu máquina local y accede a la carpeta del proyecto:
@@ -90,7 +90,7 @@ Para usar el asistente de IA local para retención de clientes:
 
 ---
 
-## 🚀 Guía de Ejecución
+## Guía de Ejecución
 
 ### Paso 1: Ejecutar el Pipeline de Machine Learning
 Para realizar la limpieza, preprocesar, entrenar (con tuning de hiperparámetros) y evaluar el modelo sobre el conjunto de prueba independiente, ejecuta el siguiente comando:
@@ -115,6 +115,6 @@ Abre en tu navegador `http://localhost:8501`. Podrás seleccionar cualquier clie
 
 ---
 
-## 👥 Integrantes
+## Integrantes
 *   **Mariana Carrasquilla Botero** 
 *   **Sofía Gallo de la Rosa** 
